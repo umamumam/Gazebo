@@ -1,5 +1,7 @@
 # 🌲 Sae Gazebo - Premium Woodcraft & Modern Gazebo Configurator
 
+<img width="1920" height="7703" alt="screencapture-localhost-5173-2026-06-04-15_00_19" src="https://github.com/user-attachments/assets/cd5bdf1e-4373-480a-852e-e813d93a1e6d" />
+
 Sae Gazebo adalah platform web e-commerce premium untuk pemesanan dan kustomisasi gazebo kayu jati, mahoni, dan bambu secara interaktif. Web ini menggabungkan keindahan kerajinan kayu tradisional Jepara dengan teknologi modern berupa simulator kustomisasi real-time (*interactive configurator*) serta desain antarmuka (*UI*) modern berkonsep *glassmorphism*.
 
 ---
