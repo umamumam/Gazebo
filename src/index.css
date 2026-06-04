@@ -453,7 +453,8 @@ h4 {
 
 .typewriter-line {
   display: inline;
-  white-space: pre;
+  white-space: pre-wrap;
+  word-break: keep-all;
 }
 
 /* The blinking caret */
@@ -2439,12 +2440,15 @@ h4 {
     text-align: center;
     gap: 32px;
   }
-  .hero-content h1 {
-    font-size: 36px;
+  .hero-content h1,
+  .hero-typewriter-heading {
+    font-size: 36px !important;
+    min-height: 2.4em !important;
   }
   .hero-content p {
     margin-left: auto;
     margin-right: auto;
+    max-width: 600px;
   }
   .hero-cta {
     justify-content: center;
@@ -2472,6 +2476,11 @@ h4 {
   }
   .configurator-card {
     grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 24px;
+  }
+  .config-preview-panel {
+    order: -1; /* Show visual preview on top on mobile */
   }
   .footer-newsletter-card {
     grid-template-columns: 1fr;
@@ -2489,11 +2498,13 @@ h4 {
   }
   .newsletter-visual {
     order: -1;
-    max-height: 200px;
+    max-height: none;
     overflow: visible;
+    margin-bottom: 16px;
   }
   .newsletter-gazebo-img {
-    max-width: 200px;
+    max-width: 240px;
+    transform: scale(1) translateY(0); /* Reset scaling and offset translations for mobile */
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -2516,6 +2527,14 @@ h4 {
   .menu-toggle {
     display: block;
   }
+  .hero-content h1,
+  .hero-typewriter-heading {
+    font-size: 30px !important;
+    min-height: 2.6em !important;
+  }
+  .hero-image-card img {
+    max-width: 320px;
+  }
   .features-grid {
     grid-template-columns: 1fr;
   }
@@ -2524,6 +2543,16 @@ h4 {
   }
   .help-bullets {
     grid-template-columns: 1fr;
+  }
+  .preview-graphic {
+    height: 240px;
+  }
+  .price-value {
+    font-size: 26px;
+  }
+  .option-pill {
+    padding: 8px 14px;
+    font-size: 13px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -2541,6 +2570,45 @@ h4 {
   }
   .wa-chat-window {
     width: calc(100vw - 64px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1,
+  .hero-typewriter-heading {
+    font-size: 24px !important;
+    min-height: 2.8em !important;
+  }
+  .hero-image-card img {
+    max-width: 250px;
+  }
+  .hero-cta {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .hero-cta .btn {
+    width: 100%;
+  }
+  .configurator-card {
+    padding: 16px;
+    gap: 16px;
+  }
+  .preview-graphic {
+    height: 200px;
+  }
+  .option-pills {
+    gap: 8px;
+  }
+  .option-pill {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .price-value {
+    font-size: 22px;
+  }
+  .footer-newsletter-card {
+    padding: 32px 16px;
   }
 }
 
